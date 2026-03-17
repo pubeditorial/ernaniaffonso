@@ -230,7 +230,6 @@
 
     #author-site .stripe--soft{ background:var(--bg-soft); }
     #author-site .stripe--plain{ background:transparent; }
-    #author-site .stripe--minimal{ padding:24px 0 0; }
 
     #author-site .head{
       display:flex;
@@ -298,8 +297,7 @@
     #author-site .capture-band,
     #author-site .faq-item,
     #author-site .footer,
-    #author-site .hero-side-card,
-    #author-site .pub-mini{
+    #author-site .hero-side-card{
       background:var(--panel);
       border:1px solid var(--line);
       box-shadow:var(--shadow-card);
@@ -990,72 +988,6 @@
       }
     }
 
-    #author-site .pub-mini{
-      border-radius:16px;
-      padding:14px 16px;
-      max-width:520px;
-      box-shadow:none;
-      background:#faf5ee;
-    }
-
-    #author-site .pub-mini strong{
-      display:block;
-      font-size:13px;
-      line-height:1.2;
-      margin-bottom:4px;
-    }
-
-    #author-site .pub-mini p{
-      margin:0;
-      color:var(--muted);
-      font-size:12.8px;
-      line-height:1.6;
-    }
-
-    #author-site .pub-mini .pub-links{
-      margin-top:6px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px 14px;
-      color:var(--muted2);
-      font-size:12.5px;
-    }
-
-    #author-site .pub-mini .pub-links a{
-      text-decoration:underline;
-      text-decoration-color:rgba(28,24,21,.22);
-      text-underline-offset:2px;
-    }
-
-    #author-site .pub-mini--balanced{
-      max-width:100%;
-      display:grid;
-      gap:12px 20px;
-      align-items:center;
-    }
-
-    @media (min-width:760px){
-      #author-site .pub-mini--balanced{
-        grid-template-columns:minmax(0,1fr) auto;
-      }
-    }
-
-    #author-site .pub-mini-copy{
-      display:grid;
-      gap:4px;
-    }
-
-    #author-site .pub-mini--balanced .pub-links{
-      margin-top:0;
-      justify-content:flex-start;
-    }
-
-    @media (min-width:760px){
-      #author-site .pub-mini--balanced .pub-links{
-        justify-content:flex-end;
-      }
-    }
-
     #author-site .footer{
       border-radius:24px;
       padding:18px 20px;
@@ -1122,6 +1054,25 @@
       width:1px;
       height:14px;
       background:var(--line-strong);
+    }
+
+    #author-site .pub-signature{
+      padding:8px 0 28px;
+    }
+
+    #author-site .pub-signature-text{
+      margin:0;
+      text-align:center;
+      color:var(--muted2);
+      font-size:12px;
+      line-height:1.7;
+    }
+
+    #author-site .pub-signature-text a{
+      color:inherit;
+      text-decoration:underline;
+      text-decoration-color:rgba(28,24,21,.18);
+      text-underline-offset:2px;
     }
 
     #lead-modal{
@@ -1959,22 +1910,6 @@
         </div>
       </section>
 
-      <section class="stripe stripe--minimal" aria-label="Informação adicional">
-        <div class="wrap">
-          <div class="pub-mini pub-mini--balanced">
-            <div class="pub-mini-copy">
-              <strong>PUB Editorial</strong>
-              <p>Tudo para a publicação do seu livro!</p>
-            </div>
-
-            <div class="pub-links">
-              <a href="https://wa.me/5551996581275" target="_blank" rel="noopener noreferrer">WhatsApp: 51996581275</a>
-              <a href="https://instagram.com/pubeditorial" target="_blank" rel="noopener noreferrer">Instagram: @pubeditorial</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="stripe stripe--plain" style="padding-top:24px" aria-label="Rodapé">
         <div class="wrap">
           <footer class="footer" aria-label="Rodapé">
@@ -2004,6 +1939,17 @@
               </ul>
             </div>
           </footer>
+        </div>
+      </section>
+
+      <section class="pub-signature" aria-label="Crédito técnico">
+        <div class="wrap">
+          <p class="pub-signature-text">
+            Página provida por PUB Editorial Pages ·
+            <a href="https://wa.me/5551996581275" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            ·
+            <a href="https://instagram.com/pubeditorial" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </p>
         </div>
       </section>
     </main>
