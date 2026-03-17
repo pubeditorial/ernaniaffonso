@@ -96,7 +96,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZS7FSCH0R"></script>
   <script>
     window.GA_MEASUREMENT_ID = "G-TZS7FSCH0R";
-    window.PUB_LEADS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwx80u41slmpkIxMG8N9NeiPPAWLaJv4pMz3GGraLrUD3bYQLPpUKcPtqhKUUfA1hS7Ig/exec";
+    window.PUB_LEADS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzv7ZxCbFxRr5sytCBNm9sNFM3WNZ6ynrxk2sy2x7kT2W_w5MaBg0onWrk_KrMawKMnXQ/exec";
     window.PUB_CONTACT_WHATSAPP = "5551996581275";
 
     window.dataLayer = window.dataLayer || [];
@@ -2169,43 +2169,51 @@
       }
 
       async function fetchJsonPost(payload) {
-        if (!window.PUB_LEADS_ENDPOINT) {
-          throw new Error("Serviço indisponível no momento.");
-        }
+  if (!window.PUB_LEADS_ENDPOINT) {
+    throw new Error("Serviço indisponível no momento.");
+  }
 
-        const response = await fetch(window.PUB_LEADS_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-            "Accept": "application/json, text/plain, */*"
-          },
-          body: JSON.stringify(payload),
-          redirect: "follow"
-        });
+  const response = await fetch(window.PUB_LEADS_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    body: JSON.stringify(payload),
+    redirect: "follow"
+  });
 
-        const text = await response.text();
-        let data = null;
+  const text = await response.text();
+  var data = null;
 
-        try {
-          data = JSON.parse(text);
-        } catch (_) {
-          data = null;
-        }
+  if (!text || !text.trim()) {
+    throw new Error("O serviço respondeu sem conteúdo.");
+  }
 
-        if (!response.ok) {
-          throw new Error((data && (data.error || data.message)) || "Não foi possível processar sua solicitação.");
-        }
+  try {
+    data = JSON.parse(text);
+  } catch (_) {
+    throw new Error("O serviço respondeu em formato inválido.");
+  }
 
-        if (!text || !text.trim()) {
-          throw new Error("O serviço respondeu sem conteúdo.");
-        }
+  if (!data || typeof data !== "object") {
+    throw new Error("O serviço respondeu em formato inválido.");
+  }
 
-        if (!data) {
-          throw new Error("O serviço respondeu em formato inválido.");
-        }
+  if (!response.ok) {
+    throw new Error((data && (data.error || data.message)) || "Não foi possível processar sua solicitação.");
+  }
 
-        return data;
-      }
+  if (data.ok === false) {
+    throw new Error(data.error || data.message || "Não foi possível processar sua solicitação.");
+  }
+
+  if (data.ok !== true) {
+    throw new Error("O serviço respondeu em formato inválido.");
+  }
+
+  return data;
+}
 
       function setModalDownloadText(item) {
         const upper = canonicalItem(item);
