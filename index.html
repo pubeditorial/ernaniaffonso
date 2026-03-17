@@ -297,8 +297,7 @@
     #author-site .capture-band,
     #author-site .faq-item,
     #author-site .footer,
-    #author-site .hero-side-card,
-    #author-site .about-side-card{
+    #author-site .hero-side-card{
       background:var(--panel);
       border:1px solid var(--line);
       box-shadow:var(--shadow-card);
@@ -575,34 +574,41 @@
 
     #author-site .w-full{ width:100%; }
 
-    #author-site .split{
+    #author-site .about-layout{
       display:grid;
       gap:clamp(20px,2.4vw,30px);
-      align-items:start;
+      align-items:stretch;
     }
 
-    @media (min-width:960px){
-      #author-site .split{
-        grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+    @media (min-width:980px){
+      #author-site .about-layout{
+        grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
+        grid-template-areas:
+          "main highlights"
+          "band band";
       }
+
+      #author-site .about-main{ grid-area:main; }
+      #author-site .about-highlights{ grid-area:highlights; }
+      #author-site .about-cta-band{ grid-area:band; }
     }
 
-    #author-site .about-copy{
+    #author-site .about-main{
       display:grid;
       gap:16px;
       min-width:0;
-      padding-right:clamp(0px,1.2vw,10px);
+      align-content:start;
     }
 
-    #author-site .highlights{
+    #author-site .about-highlights{
       display:grid;
       gap:12px;
       grid-template-columns:repeat(2,minmax(0,1fr));
-      margin-top:6px;
+      align-content:start;
     }
 
-    @media (max-width:760px){
-      #author-site .highlights{
+    @media (max-width:640px){
+      #author-site .about-highlights{
         grid-template-columns:1fr;
       }
     }
@@ -630,34 +636,37 @@
       display:block;
     }
 
-    #author-site .about-side{
-      min-width:0;
-    }
-
-    #author-site .about-side-card{
-      border-radius:28px;
-      padding:20px;
-      display:grid;
-      gap:14px;
-    }
-
-    #author-site .about-side-item{
-      border:1px solid var(--line);
-      border-radius:20px;
-      background:#faf5ee;
-      padding:16px;
+    #author-site .about-cta-band{
       display:grid;
       gap:12px;
+      grid-template-columns:repeat(3,minmax(0,1fr));
     }
 
-    #author-site .about-side-item h3{
+    @media (max-width:900px){
+      #author-site .about-cta-band{
+        grid-template-columns:1fr;
+      }
+    }
+
+    #author-site .about-cta-item{
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:var(--panel);
+      padding:20px;
+      display:grid;
+      gap:12px;
+      min-height:100%;
+      box-shadow:var(--shadow-card);
+    }
+
+    #author-site .about-cta-item h3{
       margin:0;
       font-size:18px;
       line-height:1.15;
       letter-spacing:-.02em;
     }
 
-    #author-site .about-side-item p{
+    #author-site .about-cta-item p{
       margin:0;
       color:var(--muted);
       font-size:14px;
@@ -1373,8 +1382,8 @@
 
       <section class="stripe stripe--plain" id="sobre" aria-label="Sobre o autor">
         <div class="wrap">
-          <div class="panel split">
-            <div class="about-copy">
+          <div class="panel about-layout">
+            <div class="about-main">
               <div class="head">
                 <span class="tag">Sobre o autor</span>
                 <h2 class="h2">Uma poesia voltada ao sentimento e à reflexão</h2>
@@ -1387,71 +1396,72 @@
               <p class="muted">
                 Sua obra percorre temas como amor, saudade, ausência, fé, desejo, sonho e busca de sentido, em uma escrita marcada por emoção, imagens fortes e atenção ao ritmo.
               </p>
-
-              <div class="highlights" aria-label="Aspectos da obra">
-                <div class="highlight">
-                  <strong>Percurso</strong>
-                  <span>Da formação científica à literatura, um percurso marcado por deslocamento e reinvenção.</span>
-                </div>
-                <div class="highlight">
-                  <strong>Temas</strong>
-                  <span>Amor, saudade, fé, desejo, memória e compaixão atravessam a obra.</span>
-                </div>
-                <div class="highlight">
-                  <strong>Imagens recorrentes</strong>
-                  <span>Jardins, rios, vento, céu, silêncio, luz e sombra compõem imagens recorrentes na poesia.</span>
-                </div>
-                <div class="highlight">
-                  <strong>Leitura</strong>
-                  <span>Uma poesia de intensidade afetiva e imaginação verbal.</span>
-                </div>
-              </div>
             </div>
 
-            <aside class="about-side" aria-label="Aproximação com a obra">
-              <div class="about-side-card">
-                <div class="about-side-item">
-                  <h3>Catálogo do autor</h3>
-                  <p>Um panorama da obra, com livros, materiais e caminhos de leitura.</p>
-                  <button
-                    class="btn btn--primary w-full js-download"
-                    type="button"
-                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
-                    data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
-                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                      <path d="M12 3v10"/>
-                      <path d="M8 9l4 4 4-4"/>
-                      <path d="M4 17v3h16v-3"/>
-                    </svg>
-                    Download do catálogo
-                  </button>
-                </div>
+            <aside class="about-highlights" aria-label="Aspectos da obra">
+              <div class="highlight">
+                <strong>Percurso</strong>
+                <span>Da formação científica à literatura, um percurso marcado por deslocamento e reinvenção.</span>
+              </div>
 
-                <div class="about-side-item">
-                  <h3>Novidades da obra</h3>
-                  <p>Receba por e-mail notícias sobre livros, leituras e novos materiais.</p>
-                  <button
-                    class="btn btn--secondary w-full js-download"
-                    type="button"
-                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
-                    data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
-                    Acompanhar novidades
-                  </button>
-                </div>
+              <div class="highlight">
+                <strong>Temas</strong>
+                <span>Amor, saudade, fé, desejo, memória e compaixão atravessam a obra.</span>
+              </div>
 
-                <div class="about-side-item">
-                  <h3>Leitura inicial</h3>
-                  <p>Receba um material de leitura para uma primeira aproximação com a obra.</p>
-                  <button
-                    class="btn btn--secondary w-full js-download"
-                    type="button"
-                    data-item="LEITURA AUTOR ERNANI AFFONSO TREIN JUNIOR"
-                    data-file-id="ARQUIVO_ID_LEITURA_AUTOR">
-                    Receber leitura
-                  </button>
-                </div>
+              <div class="highlight">
+                <strong>Imagens recorrentes</strong>
+                <span>Jardins, rios, vento, céu, silêncio, luz e sombra compõem imagens recorrentes na poesia.</span>
+              </div>
+
+              <div class="highlight">
+                <strong>Leitura</strong>
+                <span>Uma poesia de intensidade afetiva e imaginação verbal.</span>
               </div>
             </aside>
+
+            <div class="about-cta-band" aria-label="Materiais do autor">
+              <div class="about-cta-item">
+                <h3>Catálogo do autor</h3>
+                <p>Um panorama da obra, com livros, materiais e caminhos de leitura.</p>
+                <button
+                  class="btn btn--primary w-full js-download"
+                  type="button"
+                  data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                  data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                    <path d="M12 3v10"/>
+                    <path d="M8 9l4 4 4-4"/>
+                    <path d="M4 17v3h16v-3"/>
+                  </svg>
+                  Download do catálogo
+                </button>
+              </div>
+
+              <div class="about-cta-item">
+                <h3>Novidades da obra</h3>
+                <p>Receba por e-mail notícias sobre livros, leituras e novos materiais.</p>
+                <button
+                  class="btn btn--secondary w-full js-download"
+                  type="button"
+                  data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                  data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
+                  Acompanhar novidades
+                </button>
+              </div>
+
+              <div class="about-cta-item">
+                <h3>Leitura inicial</h3>
+                <p>Receba um material de leitura para uma primeira aproximação com a obra.</p>
+                <button
+                  class="btn btn--secondary w-full js-download"
+                  type="button"
+                  data-item="LEITURA AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                  data-file-id="ARQUIVO_ID_LEITURA_AUTOR">
+                  Receber leitura
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
