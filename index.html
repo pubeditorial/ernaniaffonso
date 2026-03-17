@@ -297,7 +297,8 @@
     #author-site .capture-band,
     #author-site .faq-item,
     #author-site .footer,
-    #author-site .hero-side-card{
+    #author-site .hero-side-card,
+    #author-site .about-side-card{
       background:var(--panel);
       border:1px solid var(--line);
       box-shadow:var(--shadow-card);
@@ -576,19 +577,21 @@
 
     #author-site .split{
       display:grid;
-      gap:var(--s5);
+      gap:clamp(20px,2.4vw,30px);
       align-items:start;
     }
 
     @media (min-width:960px){
       #author-site .split{
-        grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);
+        grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
       }
     }
 
     #author-site .about-copy{
       display:grid;
       gap:16px;
+      min-width:0;
+      padding-right:clamp(0px,1.2vw,10px);
     }
 
     #author-site .highlights{
@@ -628,9 +631,37 @@
     }
 
     #author-site .about-side{
+      min-width:0;
+    }
+
+    #author-site .about-side-card{
+      border-radius:28px;
+      padding:20px;
+      display:grid;
+      gap:14px;
+    }
+
+    #author-site .about-side-item{
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#faf5ee;
+      padding:16px;
       display:grid;
       gap:12px;
-      align-content:start;
+    }
+
+    #author-site .about-side-item h3{
+      margin:0;
+      font-size:18px;
+      line-height:1.15;
+      letter-spacing:-.02em;
+    }
+
+    #author-site .about-side-item p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
     }
 
     #author-site .card{
@@ -1378,10 +1409,10 @@
             </div>
 
             <aside class="about-side" aria-label="Aproximação com a obra">
-              <div class="card">
-                <h3>Catálogo do autor</h3>
-                <p>Um panorama da obra, com livros, materiais e caminhos de leitura.</p>
-                <div style="margin-top:16px;">
+              <div class="about-side-card">
+                <div class="about-side-item">
+                  <h3>Catálogo do autor</h3>
+                  <p>Um panorama da obra, com livros, materiais e caminhos de leitura.</p>
                   <button
                     class="btn btn--primary w-full js-download"
                     type="button"
@@ -1395,12 +1426,10 @@
                     Download do catálogo
                   </button>
                 </div>
-              </div>
 
-              <div class="card">
-                <h3>Novidades da obra</h3>
-                <p>Receba por e-mail notícias sobre livros, leituras e novos materiais.</p>
-                <div style="margin-top:16px;">
+                <div class="about-side-item">
+                  <h3>Novidades da obra</h3>
+                  <p>Receba por e-mail notícias sobre livros, leituras e novos materiais.</p>
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
@@ -1409,12 +1438,10 @@
                     Acompanhar novidades
                   </button>
                 </div>
-              </div>
 
-              <div class="card">
-                <h3>Leitura inicial</h3>
-                <p>Receba um material de leitura para uma primeira aproximação com a obra.</p>
-                <div style="margin-top:16px;">
+                <div class="about-side-item">
+                  <h3>Leitura inicial</h3>
+                  <p>Receba um material de leitura para uma primeira aproximação com a obra.</p>
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
