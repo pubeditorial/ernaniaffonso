@@ -79,58 +79,15 @@
         "inLanguage": "pt-BR"
       },
       {
-        "@type": "FAQPage",
-        "@id": "https://SEU-DOMINIO.com.br/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Que tipo de obra está reunida nesta página?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Esta página reúne livros de poesia de Ernani Affonso Trein Júnior, com apresentação do autor, catálogo, trechos de leitura e caminhos para acompanhar a obra."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "É possível receber um material de apresentação da obra?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. A página oferece a opção de receber um catálogo ou material de leitura por e-mail, sempre mediante preenchimento de nome e e-mail."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como acompanhar novos livros e novidades?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Você pode deixar seu contato para receber notícias sobre novos livros, leituras, atualizações da obra e outros projetos do autor."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Os livros apresentados aqui podem ser adquiridos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. A página apresenta caminhos para conhecer melhor cada livro e solicitar informações para aquisição."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Como entrar em contato para falar sobre os livros?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Você pode usar o canal de contato da própria página para enviar uma mensagem sobre os livros, leituras, interesse em aquisição ou outros assuntos relacionados à obra."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "É possível receber novidades por e-mail?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sim. A página oferece um campo de cadastro para leitores que desejem acompanhar novidades, leituras e atualizações da obra."
-            }
-          }
-        ]
+        "@type": "Book",
+        "@id": "https://SEU-DOMINIO.com.br/#livro-destaque",
+        "name": "ALVARENGA DHREX: A JORNADA",
+        "author": [
+          { "@type": "Person", "name": "Ernani Affonso Trein Júnior" },
+          { "@type": "Person", "name": "Jorge Mardini Sobrinho" }
+        ],
+        "bookFormat": "https://schema.org/Paperback",
+        "inLanguage": "pt-BR"
       }
     ]
   }
@@ -273,6 +230,7 @@
 
     #author-site .stripe--soft{ background:var(--bg-soft); }
     #author-site .stripe--plain{ background:transparent; }
+    #author-site .stripe--minimal{ padding:24px 0 0; }
 
     #author-site .head{
       display:flex;
@@ -341,7 +299,7 @@
     #author-site .faq-item,
     #author-site .footer,
     #author-site .hero-side-card,
-    #author-site .pub-note{
+    #author-site .pub-mini{
       background:var(--panel);
       border:1px solid var(--line);
       box-shadow:var(--shadow-card);
@@ -968,6 +926,19 @@
       }
     }
 
+    #author-site .material-stack{
+      display:grid;
+      gap:12px;
+      grid-template-rows:1fr 1fr;
+      min-height:100%;
+    }
+
+    @media (max-width:1080px){
+      #author-site .material-stack{
+        grid-template-rows:auto;
+      }
+    }
+
     #author-site .faq-list{
       display:grid;
       gap:12px;
@@ -1022,38 +993,38 @@
       }
     }
 
-    #author-site .pub-note{
-      border-radius:20px;
-      padding:18px 20px;
-      margin-top:var(--s5);
-      display:grid;
-      gap:8px;
-      background:#faf5ee;
+    #author-site .pub-mini{
+      border-radius:16px;
+      padding:14px 16px;
+      max-width:520px;
       box-shadow:none;
+      background:#faf5ee;
     }
 
-    #author-site .pub-note strong{
-      font-size:14px;
+    #author-site .pub-mini strong{
+      display:block;
+      font-size:13px;
       line-height:1.2;
-      color:var(--fg);
+      margin-bottom:4px;
     }
 
-    #author-site .pub-note p{
+    #author-site .pub-mini p{
       margin:0;
       color:var(--muted);
-      font-size:13.5px;
-      line-height:1.65;
+      font-size:12.8px;
+      line-height:1.6;
     }
 
-    #author-site .pub-note .links{
+    #author-site .pub-mini .pub-links{
+      margin-top:6px;
       display:flex;
       flex-wrap:wrap;
-      gap:10px 16px;
+      gap:8px 14px;
       color:var(--muted2);
-      font-size:13px;
+      font-size:12.5px;
     }
 
-    #author-site .pub-note .links a{
+    #author-site .pub-mini .pub-links a{
       text-decoration:underline;
       text-decoration-color:rgba(28,24,21,.22);
       text-underline-offset:2px;
@@ -1692,29 +1663,33 @@
           <div class="feature-panel">
             <div class="feature-grid">
               <div class="feature-cover">
-                <img src="assets/livro-destaque.jpg" alt="Capa do livro em destaque" loading="lazy" />
+                <img src="assets/alvarenga-dhrex.jpg" alt="Capa do livro Alvarenga Dhrex: A Jornada" loading="lazy" />
               </div>
 
               <div class="feature-copy">
                 <span class="feature-kicker">Livro em destaque</span>
-                <h2 class="feature-title">Terceiro livro de poemas</h2>
+                <h2 class="feature-title">Alvarenga Dhrex: A Jornada</h2>
 
                 <p class="feature-text">
-                  Um livro em que amor, desilusão, compaixão, espiritualidade, humor e reflexão sobre o próprio fazer poético convivem num mesmo campo de força. A escrita se torna mais contrastiva, mais consciente de si e mais aberta às tensões entre fé, ironia, queda, desejo e elaboração formal.
+                  <strong>Alvarenga Dhrex: A Jornada – Reflexões, Conquistas e Sedução</strong> reúne prosa e poesia num universo em que memória, desejo, excesso, introspecção e imaginação convivem intensamente. A obra acompanha um personagem marcado por deslocamentos, conquistas, inquietação interior e busca de sentido, enquanto os poemas ampliam o tom reflexivo e emocional do livro.
+                </p>
+
+                <p class="feature-text">
+                  Com autoria de Ernani Affonso Trein Júnior e Jorge Mardini Sobrinho, o livro articula cenas urbanas, humor, melancolia, sensualidade e reflexão, aproximando o leitor de uma escrita que alterna movimento, intensidade e contemplação.
                 </p>
 
                 <ul class="feature-bullets">
-                  <li>Poemas em que o lirismo convive com ironia, contrição e imaginação simbólica</li>
-                  <li>Uma voz poética mais reflexiva, contrastiva e consciente de seus próprios paradoxos</li>
-                  <li>Leitura indicada para quem busca poesia de intensidade emocional e elaboração formal</li>
+                  <li>Livro que aproxima prosa, reflexão e poesia num mesmo campo expressivo</li>
+                  <li>Atmosfera de memória, desejo, excesso, introspecção e inquietação existencial</li>
+                  <li>Leitura para quem busca uma obra de forte personalidade verbal e imagética</li>
                 </ul>
 
                 <div class="book-actions">
                   <button
                     class="btn btn--primary js-download"
                     type="button"
-                    data-item="TRECHO LIVRO TERCEIRO LIVRO DE POEMAS"
-                    data-file-id="ARQUIVO_ID_TRECHO_LIVRO_3">
+                    data-item="TRECHO LIVRO ALVARENGA DHREX"
+                    data-file-id="ARQUIVO_ID_TRECHO_ALVARENGA_DHREX">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
                       <path d="M8 9l4 4 4-4"/>
@@ -1726,7 +1701,7 @@
                   <button
                     class="btn btn--secondary js-ticket"
                     type="button"
-                    data-item="AQUISICAO LIVRO TERCEIRO LIVRO DE POEMAS">
+                    data-item="AQUISICAO LIVRO ALVARENGA DHREX">
                     Adquira esse livro
                   </button>
                 </div>
@@ -1805,19 +1780,35 @@
                 </div>
               </article>
 
-              <article class="card">
-                <h3>Novidades</h3>
-                <p>Acompanhe novos livros, leituras, atualizações e desdobramentos da produção poética por e-mail.</p>
-                <div style="margin-top:16px;">
-                  <button
-                    class="btn btn--secondary w-full js-download"
-                    type="button"
-                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
-                    data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
-                    Receber novidades
-                  </button>
-                </div>
-              </article>
+              <div class="material-stack">
+                <article class="card">
+                  <h3>Novidades</h3>
+                  <p>Acompanhe novos livros, leituras, atualizações e desdobramentos da produção poética por e-mail.</p>
+                  <div style="margin-top:16px;">
+                    <button
+                      class="btn btn--secondary w-full js-download"
+                      type="button"
+                      data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                      data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
+                      Receber novidades
+                    </button>
+                  </div>
+                </article>
+
+                <article class="card">
+                  <h3>Leitura especial</h3>
+                  <p>Receba um material adicional com apresentação de obra e seleção de leitura para uma aproximação inicial mais ampla.</p>
+                  <div style="margin-top:16px;">
+                    <button
+                      class="btn btn--secondary w-full js-download"
+                      type="button"
+                      data-item="LEITURA ESPECIAL AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                      data-file-id="ARQUIVO_ID_LEITURA_ESPECIAL">
+                      Receber leitura especial
+                    </button>
+                  </div>
+                </article>
+              </div>
 
               <article class="card">
                 <h3>Contato</h3>
@@ -1831,15 +1822,6 @@
                   </button>
                 </div>
               </article>
-            </div>
-
-            <div class="pub-note" aria-label="Informações complementares">
-              <strong>PUB Editorial</strong>
-              <p>Tudo para a publicação do seu livro.</p>
-              <div class="links">
-                <span>WhatsApp: <a href="https://wa.me/5551996581275" target="_blank" rel="noopener noreferrer">51996581275</a></span>
-                <span>Instagram: <a href="https://instagram.com/pubeditorial" target="_blank" rel="noopener noreferrer">@pubeditorial</a></span>
-              </div>
             </div>
           </div>
         </div>
@@ -1979,7 +1961,20 @@
         </div>
       </section>
 
-      <section class="stripe stripe--plain" style="padding-top:0" aria-label="Rodapé">
+      <section class="stripe stripe--minimal" aria-label="Informação adicional">
+        <div class="wrap">
+          <div class="pub-mini">
+            <strong>PUB Editorial</strong>
+            <p>Tudo para a publicação do seu livro.</p>
+            <div class="pub-links">
+              <span>WhatsApp: <a href="https://wa.me/5551996581275" target="_blank" rel="noopener noreferrer">51996581275</a></span>
+              <span>Instagram: <a href="https://instagram.com/pubeditorial" target="_blank" rel="noopener noreferrer">@pubeditorial</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stripe stripe--plain" style="padding-top:24px" aria-label="Rodapé">
         <div class="wrap">
           <footer class="footer" aria-label="Rodapé">
             <div class="footgrid">
@@ -2117,12 +2112,10 @@
       function formatPhoneBR(value) {
         const digits = normalizePhone(value);
         if (!digits) return "";
-
         if (digits.length === 11) return digits.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
         if (digits.length === 10) return digits.replace(/^(\d{2})(\d{4})(\d{4})$/, "($1) $2-$3");
         if (digits.length === 13 && digits.indexOf("55") === 0) return digits.replace(/^55(\d{2})(\d{5})(\d{4})$/, "+55 ($1) $2-$3");
         if (digits.length === 12 && digits.indexOf("55") === 0) return digits.replace(/^55(\d{2})(\d{4})(\d{4})$/, "+55 ($1) $2-$3");
-
         return String(value || "");
       }
 
@@ -2343,11 +2336,9 @@
 
       async function submitLead(payload) {
         const data = await fetchJsonPost(payload);
-
         if (data && data.ok === false) {
           throw new Error(data.error || data.message || "Não foi possível processar a solicitação.");
         }
-
         return data;
       }
 
@@ -2360,9 +2351,7 @@
           const href = anchor.getAttribute("href") || "";
           const id = decodeURIComponent(href.replace(/^#/, ""));
           const target = document.getElementById(id);
-
           if (!target) return;
-
           event.preventDefault();
           target.scrollIntoView({ behavior: "smooth", block: "start" });
         });
@@ -2431,13 +2420,11 @@
           closeModal();
           return;
         }
-
         trapFocus(event);
       });
 
       form.addEventListener("submit", async function (event) {
         event.preventDefault();
-
         if (submitBtn.disabled) return;
 
         const name = inputName.value.trim();
