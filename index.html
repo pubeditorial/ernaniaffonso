@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#161311" />
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
   <meta name="author" content="Ernani Affonso Trein Júnior" />
-  <meta name="description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Uma página autoral com livros publicados, apresentação do autor, trechos, catálogo e formas de acompanhar a obra." />
+  <meta name="description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Livros publicados, apresentação do autor, materiais de leitura e formas de acompanhar a obra." />
 
   <link rel="canonical" href="https://SEU-DOMINIO.com.br/" />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
@@ -17,7 +17,7 @@
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Ernani Affonso Trein Júnior" />
   <meta property="og:title" content="Ernani Affonso Trein Júnior | Poesia" />
-  <meta property="og:description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Uma página autoral com livros publicados, apresentação do autor, trechos, catálogo e formas de acompanhar a obra." />
+  <meta property="og:description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Livros publicados, apresentação do autor, materiais de leitura e formas de acompanhar a obra." />
   <meta property="og:url" content="https://SEU-DOMINIO.com.br/" />
   <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og-ernani.jpg" />
   <meta property="og:image:alt" content="Ernani Affonso Trein Júnior" />
@@ -26,7 +26,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ernani Affonso Trein Júnior | Poesia" />
-  <meta name="twitter:description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Uma página autoral com livros publicados, apresentação do autor, trechos, catálogo e formas de acompanhar a obra." />
+  <meta name="twitter:description" content="Conheça a poesia de Ernani Affonso Trein Júnior. Livros publicados, apresentação do autor, materiais de leitura e formas de acompanhar a obra." />
   <meta name="twitter:image" content="https://SEU-DOMINIO.com.br/assets/og-ernani.jpg" />
   <meta name="twitter:image:alt" content="Ernani Affonso Trein Júnior" />
 
@@ -48,7 +48,7 @@
         "@id": "https://SEU-DOMINIO.com.br/#webpage",
         "url": "https://SEU-DOMINIO.com.br/",
         "name": "Ernani Affonso Trein Júnior | Poesia",
-        "description": "Conheça a poesia de Ernani Affonso Trein Júnior. Uma página autoral com livros publicados, apresentação do autor, trechos, catálogo e formas de acompanhar a obra.",
+        "description": "Conheça a poesia de Ernani Affonso Trein Júnior. Livros publicados, apresentação do autor, materiais de leitura e formas de acompanhar a obra.",
         "about": {
           "@id": "https://SEU-DOMINIO.com.br/#person"
         },
@@ -100,7 +100,7 @@
           },
           {
             "@type": "Question",
-            "name": "Como acompanhar novos livros e novidades do autor?",
+            "name": "Como acompanhar novos livros e novidades?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Você pode deixar seu contato para receber notícias sobre novos livros, leituras, atualizações da obra e outros projetos do autor."
@@ -124,10 +124,10 @@
           },
           {
             "@type": "Question",
-            "name": "Esta página é do autor ou de uma editora?",
+            "name": "É possível receber novidades por e-mail?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Esta é uma página autoral, dedicada à apresentação pública da obra de Ernani Affonso Trein Júnior para leitores interessados em sua poesia."
+              "text": "Sim. A página oferece um campo de cadastro para leitores que desejem acompanhar novidades, leituras e atualizações da obra."
             }
           }
         ]
@@ -169,7 +169,6 @@
       --line-strong:rgba(28,24,21,.18);
       --accent:#6b2f30;
       --accent-soft:#854547;
-      --accent-deep:#2f2a28;
       --focus:rgba(107,47,48,.22);
       --container:1180px;
       --gutter:clamp(18px,3vw,34px);
@@ -218,11 +217,7 @@
     }
 
     #author-site *{ box-sizing:border-box; }
-
-    #author-site a{
-      color:inherit;
-      text-decoration:none;
-    }
+    #author-site a{ color:inherit; text-decoration:none; }
 
     #author-site :focus-visible{
       outline:3px solid var(--focus);
@@ -272,7 +267,6 @@
     }
 
     #author-site .stripe{ padding:var(--s8) 0; }
-
     @media (max-width:760px){
       #author-site .stripe{ padding:var(--s7) 0; }
     }
@@ -346,7 +340,8 @@
     #author-site .capture-band,
     #author-site .faq-item,
     #author-site .footer,
-    #author-site .hero-side-card{
+    #author-site .hero-side-card,
+    #author-site .pub-note{
       background:var(--panel);
       border:1px solid var(--line);
       box-shadow:var(--shadow-card);
@@ -438,7 +433,7 @@
 
     @media (min-width:980px){
       #author-site .hero-body{
-        grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);
+        grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);
       }
     }
 
@@ -479,9 +474,22 @@
       gap:16px;
     }
 
+    #author-site .portrait-wrap{
+      display:grid;
+      gap:16px;
+      grid-template-columns:minmax(180px,210px) minmax(0,1fr);
+      align-items:start;
+    }
+
+    @media (max-width:640px){
+      #author-site .portrait-wrap{
+        grid-template-columns:1fr;
+      }
+    }
+
     #author-site .portrait{
       width:100%;
-      aspect-ratio:4 / 4.85;
+      aspect-ratio:4 / 4.95;
       border-radius:22px;
       overflow:hidden;
       background:#ddd;
@@ -496,7 +504,8 @@
 
     #author-site .portrait-meta{
       display:grid;
-      gap:8px;
+      gap:10px;
+      align-content:start;
     }
 
     #author-site .portrait-meta strong{
@@ -515,6 +524,12 @@
       display:grid;
       gap:10px;
       grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    @media (max-width:640px){
+      #author-site .hero-stat-grid{
+        grid-template-columns:1fr;
+      }
     }
 
     #author-site .hero-stat{
@@ -613,7 +628,7 @@
 
     @media (min-width:960px){
       #author-site .split{
-        grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);
+        grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);
       }
     }
 
@@ -698,7 +713,7 @@
 
     #author-site .book-shell{
       display:grid;
-      gap:18px;
+      gap:20px;
       align-items:start;
       grid-template-columns:minmax(170px,210px) minmax(0,1fr);
     }
@@ -1007,6 +1022,43 @@
       }
     }
 
+    #author-site .pub-note{
+      border-radius:20px;
+      padding:18px 20px;
+      margin-top:var(--s5);
+      display:grid;
+      gap:8px;
+      background:#faf5ee;
+      box-shadow:none;
+    }
+
+    #author-site .pub-note strong{
+      font-size:14px;
+      line-height:1.2;
+      color:var(--fg);
+    }
+
+    #author-site .pub-note p{
+      margin:0;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.65;
+    }
+
+    #author-site .pub-note .links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 16px;
+      color:var(--muted2);
+      font-size:13px;
+    }
+
+    #author-site .pub-note .links a{
+      text-decoration:underline;
+      text-decoration-color:rgba(28,24,21,.22);
+      text-underline-offset:2px;
+    }
+
     #author-site .footer{
       border-radius:24px;
       padding:18px 20px;
@@ -1268,7 +1320,7 @@
             <div class="hero-body">
               <div class="hero-copy">
                 <div class="kicker">
-                  <span class="tag">Página do autor</span>
+                  <span class="tag">Livros e leituras</span>
                 </div>
 
                 <h1 class="h1">ERNANI AFFONSO TREIN JÚNIOR</h1>
@@ -1307,13 +1359,16 @@
 
               <aside class="hero-visual" aria-label="Apresentação visual do autor">
                 <div class="hero-side-card">
-                  <div class="portrait">
-                    <img src="assets/ernani.jpg" alt="Retrato de Ernani Affonso Trein Júnior" loading="lazy" />
-                  </div>
+                  <div class="portrait-wrap">
+                    <div class="portrait">
+                      <img src="assets/ernani.jpg" alt="Retrato de Ernani Affonso Trein Júnior" loading="lazy" />
+                    </div>
 
-                  <div class="portrait-meta">
-                    <strong>Ernani Affonso Trein Júnior</strong>
-                    <span>Autor de livros de poesia marcados por lirismo, imaginação simbólica, reflexão e intensidade afetiva.</span>
+                    <div class="portrait-meta">
+                      <strong>Ernani Affonso Trein Júnior</strong>
+                      <span>Autor de livros de poesia marcados por lirismo, imaginação simbólica, reflexão e intensidade afetiva.</span>
+                      <span>Seu percurso literário articula experiência, memória, imaginação, fé e elaboração poética em textos de forte presença verbal.</span>
+                    </div>
                   </div>
                 </div>
 
@@ -1402,14 +1457,14 @@
 
               <div class="card">
                 <h3>Novidades da obra</h3>
-                <p>Receba por e-mail notícias sobre livros, leituras, atualizações e desdobramentos da produção poética do autor.</p>
+                <p>Receba por e-mail notícias sobre livros, leituras, atualizações e desdobramentos da produção poética.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
                     data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
-                    Acompanhar o autor
+                    Acompanhar novidades
                   </button>
                 </div>
               </div>
@@ -1465,7 +1520,7 @@
                       </div>
                       <div class="mini-card">
                         <strong>Atmosfera</strong>
-                        <span>Um livro que trabalha a paixão, a devoção amorosa e a dor da separação com imagens de natureza, luz, memória e transcendência.</span>
+                        <span>O livro trabalha paixão, devoção amorosa e dor da separação com imagens de natureza, luz, memória e transcendência.</span>
                       </div>
                       <div class="mini-card">
                         <strong>Para o leitor</strong>
@@ -1527,11 +1582,11 @@
                       </div>
                       <div class="mini-card">
                         <strong>Atmosfera</strong>
-                        <span>Trata-se de um livro em que a delicadeza convive com a intensidade, e em que a linguagem investe em imagens mais amplas e meditativas.</span>
+                        <span>Um livro em que delicadeza e intensidade convivem, e em que a linguagem investe em imagens mais amplas e meditativas.</span>
                       </div>
                       <div class="mini-card">
                         <strong>Para o leitor</strong>
-                        <span>Indicado para quem busca poesia que combine densidade emocional, imaginação simbólica e uma reflexão mais aberta sobre o sentir.</span>
+                        <span>Indicado para quem busca poesia que combine densidade emocional, imaginação simbólica e reflexão aberta sobre o sentir.</span>
                       </div>
                     </div>
 
@@ -1681,11 +1736,11 @@
         </div>
       </section>
 
-      <section class="stripe stripe--soft" aria-label="Acompanhar o autor">
+      <section class="stripe stripe--soft" aria-label="Acompanhar novidades">
         <div class="wrap">
           <div class="capture-band">
             <div>
-              <h3>Acompanhe as novidades do autor</h3>
+              <h3>Acompanhe as novidades</h3>
               <p>Receba por e-mail notícias sobre novos livros, leituras, materiais e atualizações da obra de Ernani Affonso Trein Júnior.</p>
             </div>
 
@@ -1713,7 +1768,7 @@
             <div class="head">
               <span class="tag">Leituras</span>
               <h2 class="h2">Caminhos para conhecer melhor a obra</h2>
-              <p class="muted">Para quem deseja se aproximar da poesia do autor, acompanhar publicações e receber materiais de apresentação da obra.</p>
+              <p class="muted">Para quem deseja se aproximar da poesia de Ernani Affonso Trein Júnior, acompanhar publicações e receber materiais de apresentação da obra.</p>
             </div>
 
             <div class="materials-grid">
@@ -1737,8 +1792,8 @@
               </article>
 
               <article class="card">
-                <h3>Catálogo do autor</h3>
-                <p>Uma visão de conjunto dos livros, do percurso literário e dos principais caminhos de leitura da poesia de Ernani Affonso Trein Júnior.</p>
+                <h3>Catálogo</h3>
+                <p>Uma visão de conjunto dos livros, do percurso literário e dos principais caminhos de leitura da poesia do autor.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-download"
@@ -1752,7 +1807,7 @@
 
               <article class="card">
                 <h3>Novidades</h3>
-                <p>Acompanhe novos livros, leituras, atualizações e desdobramentos da produção poética do autor por e-mail.</p>
+                <p>Acompanhe novos livros, leituras, atualizações e desdobramentos da produção poética por e-mail.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-download"
@@ -1766,7 +1821,7 @@
 
               <article class="card">
                 <h3>Contato</h3>
-                <p>Para mensagens sobre os livros, interesse em aquisição, dúvidas sobre a obra ou outras aproximações com a poesia do autor.</p>
+                <p>Para mensagens sobre os livros, interesse em aquisição, dúvidas sobre a obra ou outras aproximações com a poesia.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-ticket"
@@ -1776,6 +1831,15 @@
                   </button>
                 </div>
               </article>
+            </div>
+
+            <div class="pub-note" aria-label="Informações complementares">
+              <strong>PUB Editorial</strong>
+              <p>Tudo para a publicação do seu livro.</p>
+              <div class="links">
+                <span>WhatsApp: <a href="https://wa.me/5551996581275" target="_blank" rel="noopener noreferrer">51996581275</a></span>
+                <span>Instagram: <a href="https://instagram.com/pubeditorial" target="_blank" rel="noopener noreferrer">@pubeditorial</a></span>
+              </div>
             </div>
           </div>
         </div>
@@ -1817,7 +1881,7 @@
 
               <details class="faq-item">
                 <summary>
-                  Como acompanhar novos livros e novidades do autor?
+                  Como acompanhar novos livros e novidades?
                   <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"/>
                   </svg>
@@ -1853,13 +1917,13 @@
 
               <details class="faq-item">
                 <summary>
-                  Esta página é do autor ou de uma editora?
+                  É possível receber novidades por e-mail?
                   <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"/>
                   </svg>
                 </summary>
                 <div class="faq-answer">
-                  Esta é uma página autoral, dedicada à apresentação pública da obra de Ernani Affonso Trein Júnior para leitores interessados em sua poesia.
+                  Sim. A página oferece um campo de cadastro para leitores que desejem acompanhar novidades, leituras e atualizações da obra.
                 </div>
               </details>
             </div>
@@ -1893,14 +1957,14 @@
                     type="button"
                     data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
-                    Acompanhar o autor
+                    Acompanhar novidades
                   </button>
                 </div>
               </div>
 
               <div class="card">
                 <h3>Fale sobre os livros</h3>
-                <p>Envie uma mensagem para tratar de interesse em aquisição, dúvidas sobre as obras ou outras aproximações com a poesia do autor.</p>
+                <p>Envie uma mensagem para tratar de interesse em aquisição, dúvidas sobre as obras ou outras aproximações com a poesia.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-ticket"
@@ -2179,9 +2243,9 @@
         const upper = canonicalItem(item);
 
         if (upper.indexOf("NOVIDADES") >= 0) {
-          modalTitle.textContent = "Acompanhe as novidades do autor";
+          modalTitle.textContent = "Acompanhe as novidades";
           submitBtn.textContent = "Quero acompanhar";
-          hint.textContent = "Preencha seu nome e e-mail para receber notícias sobre livros e novos projetos.";
+          hint.textContent = "Preencha seu nome e e-mail para receber notícias sobre livros e novos materiais.";
           return;
         }
 
