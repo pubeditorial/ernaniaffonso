@@ -383,14 +383,21 @@
     #author-site .hero-body{
       margin-top:clamp(22px,3vw,36px);
       display:grid;
-      gap:clamp(20px,2.6vw,32px);
-      align-items:stretch;
+      gap:clamp(18px,2.2vw,28px);
+      align-items:start;
     }
 
     @media (min-width:980px){
       #author-site .hero-body{
-        grid-template-columns:minmax(0,1.06fr) minmax(360px,.94fr);
+        grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);
+        grid-template-areas:
+          "copy portrait"
+          "stats stats";
       }
+
+      #author-site .hero-copy{ grid-area:copy; }
+      #author-site .hero-portrait-card{ grid-area:portrait; }
+      #author-site .hero-stats-card{ grid-area:stats; }
     }
 
     #author-site .hero-copy{
@@ -415,12 +422,9 @@
       max-width:62ch;
     }
 
-    #author-site .hero-visual{
-      display:grid;
-      gap:14px;
+    #author-site .hero-portrait-card,
+    #author-site .hero-stats-card{
       min-width:0;
-      align-content:start;
-      grid-template-rows:auto auto;
     }
 
     #author-site .hero-side-card{
@@ -430,11 +434,15 @@
       gap:16px;
     }
 
+    #author-site .hero-stats-card{
+      padding:18px;
+    }
+
     #author-site .portrait-wrap{
       display:grid;
       gap:16px;
-      grid-template-columns:minmax(180px,210px) minmax(0,1fr);
-      align-items:start;
+      grid-template-columns:minmax(170px,210px) minmax(0,1fr);
+      align-items:stretch;
     }
 
     @media (max-width:640px){
@@ -461,7 +469,7 @@
     #author-site .portrait-meta{
       display:grid;
       gap:10px;
-      align-content:start;
+      align-content:center;
     }
 
     #author-site .portrait-meta strong{
@@ -478,8 +486,14 @@
 
     #author-site .hero-stat-grid{
       display:grid;
-      gap:10px;
-      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+
+    @media (max-width:979px){
+      #author-site .hero-stat-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
     }
 
     @media (max-width:640px){
@@ -1245,8 +1259,8 @@
           <div class="hero-inner">
             <header class="header">
               <div class="brand" aria-label="Identidade do autor">
-                <div class="logo">Obra poética</div>
-                <div class="sub">Ernani Affonso Trein Júnior</div>
+                <div class="logo">Ernani Affonso Trein Júnior</div>
+                <div class="sub">Poesia</div>
               </div>
 
               <nav class="actions" aria-label="Navegação principal">
@@ -1258,7 +1272,7 @@
                 <button
                   class="navlink js-download"
                   type="button"
-                  data-item="CATALOGO_ERNANI"
+                  data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                   data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
                   Download
                 </button>
@@ -1271,10 +1285,10 @@
                   <span class="tag">Livros e leituras</span>
                 </div>
 
-                <h1 class="h1">Ernani Affonso Trein Júnior</h1>
+                <h1 class="h1">ERNANI AFFONSO TREIN JÚNIOR</h1>
 
                 <p class="hero-lead">
-                  Poeta porto-alegrense do bairro Alto Petrópolis, com formação em Geologia pela UFRGS e pós-graduação na Universidade da Georgia, nos Estados Unidos, passou a dedicar-se à poesia e à escrita após os 40 anos.
+                  Ernani Affonso Trein Júnior é porto-alegrense do bairro Alto Petrópolis. Geólogo formado pela UFRGS, com pós-graduação na Universidade da Georgia, nos Estados Unidos, passou a dedicar-se à poesia e à escrita após os 40 anos.
                 </p>
 
                 <p class="mini">
@@ -1285,7 +1299,7 @@
                   <button
                     class="btn btn--primary js-download"
                     type="button"
-                    data-item="CATALOGO_ERNANI"
+                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
@@ -1305,42 +1319,40 @@
                 </div>
               </div>
 
-              <aside class="hero-visual" aria-label="Apresentação visual do autor">
-                <div class="hero-side-card">
-                  <div class="portrait-wrap">
-                    <div class="portrait">
-                      <img src="assets/ernani.jpg" alt="Retrato do poeta Ernani Affonso Trein Júnior" loading="lazy" />
-                    </div>
-
-                    <div class="portrait-meta">
-                      <strong>O autor</strong>
-                      <span>Autor de livros de poesia voltados ao amor, à saudade, à fé, ao desejo, à imaginação e à reflexão.</span>
-                      <span>Seus textos aproximam sentimento, ritmo e imagens marcantes para o leitor.</span>
-                    </div>
+              <aside class="hero-portrait-card hero-side-card" aria-label="Apresentação visual do autor">
+                <div class="portrait-wrap">
+                  <div class="portrait">
+                    <img src="assets/ernani.jpg" alt="Retrato de Ernani Affonso Trein Júnior" loading="lazy" />
                   </div>
-                </div>
 
-                <div class="hero-side-card">
-                  <div class="hero-stat-grid">
-                    <div class="hero-stat">
-                      <strong>Origem</strong>
-                      <span>Porto Alegre, bairro Alto Petrópolis.</span>
-                    </div>
-                    <div class="hero-stat">
-                      <strong>Formação</strong>
-                      <span>Geologia pela UFRGS e pós-graduação na Universidade da Georgia.</span>
-                    </div>
-                    <div class="hero-stat">
-                      <strong>Dedicação literária</strong>
-                      <span>Passou a dedicar-se à poesia e à escrita após os 40 anos.</span>
-                    </div>
-                    <div class="hero-stat">
-                      <strong>Temas da obra</strong>
-                      <span>Amor, saudade, fé, sonho, desejo, imaginação e reflexão.</span>
-                    </div>
+                  <div class="portrait-meta">
+                    <strong>Ernani Affonso Trein Júnior</strong>
+                    <span>Autor de livros de poesia voltados ao amor, à saudade, à fé, ao desejo, à imaginação e à reflexão.</span>
+                    <span>Seus textos aproximam sentimento, ritmo e imagens marcantes para o leitor.</span>
                   </div>
                 </div>
               </aside>
+
+              <div class="hero-stats-card hero-side-card">
+                <div class="hero-stat-grid">
+                  <div class="hero-stat">
+                    <strong>Origem</strong>
+                    <span>Porto Alegre, bairro Alto Petrópolis.</span>
+                  </div>
+                  <div class="hero-stat">
+                    <strong>Formação</strong>
+                    <span>Geologia pela UFRGS e pós-graduação na Universidade da Georgia.</span>
+                  </div>
+                  <div class="hero-stat">
+                    <strong>Dedicação literária</strong>
+                    <span>Passou a dedicar-se à poesia e à escrita após os 40 anos.</span>
+                  </div>
+                  <div class="hero-stat">
+                    <strong>Temas da obra</strong>
+                    <span>Amor, saudade, fé, sonho, desejo, imaginação e reflexão.</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1356,7 +1368,7 @@
               </div>
 
               <p class="muted">
-                Natural de Porto Alegre, no bairro Alto Petrópolis, o autor é geólogo formado pela UFRGS, com pós-graduação na Universidade da Georgia. Depois dos 40 anos, passou a dedicar-se mais intensamente à poesia e à escrita.
+                Natural de Porto Alegre, no bairro Alto Petrópolis, Ernani Affonso Trein Júnior é geólogo formado pela UFRGS, com pós-graduação na Universidade da Georgia. Depois dos 40 anos, passou a dedicar-se mais intensamente à poesia e à escrita.
               </p>
 
               <p class="muted">
@@ -1391,7 +1403,7 @@
                   <button
                     class="btn btn--primary w-full js-download"
                     type="button"
-                    data-item="CATALOGO_ERNANI"
+                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
@@ -1410,7 +1422,7 @@
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
-                    data-item="NOVIDADES_ERNANI"
+                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
                     Acompanhar novidades
                   </button>
@@ -1424,7 +1436,7 @@
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
-                    data-item="LEITURA_ERNANI"
+                    data-item="LEITURA AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_LEITURA_AUTOR">
                     Receber leitura
                   </button>
@@ -1486,7 +1498,7 @@
                       <button
                         class="btn btn--primary js-download"
                         type="button"
-                        data-item="TRECHO_LIVRO_1"
+                        data-item="TRECHO LIVRO PRIMEIRO LIVRO DE POEMAS"
                         data-file-id="ARQUIVO_ID_TRECHO_LIVRO_1">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                           <path d="M12 3v10"/>
@@ -1499,7 +1511,7 @@
                       <button
                         class="btn btn--micro js-ticket"
                         type="button"
-                        data-item="AQUISICAO_LIVRO_1">
+                        data-item="AQUISICAO LIVRO PRIMEIRO LIVRO DE POEMAS">
                         Adquira esse livro
                       </button>
                     </div>
@@ -1548,7 +1560,7 @@
                       <button
                         class="btn btn--primary js-download"
                         type="button"
-                        data-item="TRECHO_LIVRO_2"
+                        data-item="TRECHO LIVRO SEGUNDO LIVRO DE POEMAS"
                         data-file-id="ARQUIVO_ID_TRECHO_LIVRO_2">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                           <path d="M12 3v10"/>
@@ -1561,7 +1573,7 @@
                       <button
                         class="btn btn--micro js-ticket"
                         type="button"
-                        data-item="AQUISICAO_LIVRO_2">
+                        data-item="AQUISICAO LIVRO SEGUNDO LIVRO DE POEMAS">
                         Adquira esse livro
                       </button>
                     </div>
@@ -1610,7 +1622,7 @@
                       <button
                         class="btn btn--primary js-download"
                         type="button"
-                        data-item="TRECHO_LIVRO_3"
+                        data-item="TRECHO LIVRO TERCEIRO LIVRO DE POEMAS"
                         data-file-id="ARQUIVO_ID_TRECHO_LIVRO_3">
                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                           <path d="M12 3v10"/>
@@ -1623,7 +1635,7 @@
                       <button
                         class="btn btn--micro js-ticket"
                         type="button"
-                        data-item="AQUISICAO_LIVRO_3">
+                        data-item="AQUISICAO LIVRO TERCEIRO LIVRO DE POEMAS">
                         Adquira esse livro
                       </button>
                     </div>
@@ -1665,7 +1677,7 @@
                   <button
                     class="btn btn--primary js-download"
                     type="button"
-                    data-item="TRECHO_ALVARENGA_DHREX"
+                    data-item="TRECHO LIVRO ALVARENGA DHREX"
                     data-file-id="ARQUIVO_ID_TRECHO_ALVARENGA_DHREX">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
@@ -1678,7 +1690,7 @@
                   <button
                     class="btn btn--secondary js-ticket"
                     type="button"
-                    data-item="AQUISICAO_ALVARENGA_DHREX">
+                    data-item="AQUISICAO LIVRO ALVARENGA DHREX">
                     Adquira esse livro
                   </button>
                 </div>
@@ -1693,14 +1705,14 @@
           <div class="capture-band">
             <div>
               <h3>Acompanhe as novidades</h3>
-              <p>Receba por e-mail notícias sobre lançamentos, leituras e novos materiais.</p>
+              <p>Receba por e-mail notícias sobre livros, leituras, materiais e atualizações da obra.</p>
             </div>
 
             <div>
               <button
                 class="btn btn--primary js-download"
                 type="button"
-                data-item="NOVIDADES_ERNANI"
+                data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                 data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                   <path d="M12 3v10"/>
@@ -1731,7 +1743,7 @@
                   <button
                     class="btn btn--primary w-full js-download"
                     type="button"
-                    data-item="TRECHO_ERNANI"
+                    data-item="TRECHO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_TRECHO_AUTOR">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
@@ -1745,12 +1757,12 @@
 
               <article class="card">
                 <h3>Catálogo</h3>
-                <p>Uma visão dos títulos publicados, do percurso literário e dos principais caminhos de leitura.</p>
+                <p>Uma visão dos livros, do percurso literário e dos principais caminhos de leitura da poesia do autor.</p>
                 <div style="margin-top:16px;">
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
-                    data-item="CATALOGO_ERNANI"
+                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
                     Download do catálogo
                   </button>
@@ -1764,7 +1776,7 @@
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
-                    data-item="NOVIDADES_ERNANI"
+                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
                     Receber novidades
                   </button>
@@ -1778,7 +1790,7 @@
                   <button
                     class="btn btn--secondary w-full js-ticket"
                     type="button"
-                    data-item="CONTATO_ERNANI">
+                    data-item="CONTATO AUTOR ERNANI AFFONSO TREIN JUNIOR">
                     Entrar em contato
                   </button>
                 </div>
@@ -1794,7 +1806,7 @@
             <div class="head">
               <span class="tag">Perguntas frequentes</span>
               <h2 class="h2">Informações para quem deseja conhecer melhor os livros</h2>
-              <p class="muted">Respostas rápidas para leitores interessados na obra, nos livros publicados e nas formas de acompanhar sua poesia.</p>
+              <p class="muted">Respostas rápidas para leitores interessados na obra, nos livros publicados e nas formas de acompanhar a poesia de Ernani Affonso Trein Júnior.</p>
             </div>
 
             <div class="faq-list">
@@ -1806,7 +1818,7 @@
                   </svg>
                 </summary>
                 <div class="faq-answer">
-                  Esta página reúne livros do autor, além de catálogo, trechos de leitura e formas de acompanhar sua obra.
+                  Esta página reúne livros de Ernani Affonso Trein Júnior, além de catálogo, trechos de leitura e formas de acompanhar sua obra.
                 </div>
               </details>
 
@@ -1867,7 +1879,7 @@
                   <button
                     class="btn btn--primary w-full js-download"
                     type="button"
-                    data-item="CATALOGO_ERNANI"
+                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_CATALOGO_AUTOR">
                     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
                       <path d="M12 3v10"/>
@@ -1886,7 +1898,7 @@
                   <button
                     class="btn btn--secondary w-full js-download"
                     type="button"
-                    data-item="NOVIDADES_ERNANI"
+                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
                     Acompanhar novidades
                   </button>
@@ -1900,7 +1912,7 @@
                   <button
                     class="btn btn--secondary w-full js-ticket"
                     type="button"
-                    data-item="CONTATO_ERNANI">
+                    data-item="CONTATO AUTOR ERNANI AFFONSO TREIN JUNIOR">
                     Entrar em contato
                   </button>
                 </div>
@@ -1931,7 +1943,7 @@
                   <button
                     type="button"
                     class="js-download"
-                    data-item="NOVIDADES_ERNANI"
+                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
                     data-file-id="ARQUIVO_ID_NOVIDADES_AUTOR">
                     Receber novidades da obra
                   </button>
