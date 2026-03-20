@@ -711,26 +711,26 @@
       line-height:1.58;
     }
 
-   #author-site .book-sample{
-  border-left:3px solid rgba(107,47,48,.22);
-  background:#fbf6ef;
-  border-radius:16px;
-  padding:14px 16px;
-  color:var(--fg);
-  font-size:14px;
-  line-height:1.75;
-  white-space:pre-line;
-}
+    #author-site .book-sample{
+      border-left:3px solid rgba(107,47,48,.22);
+      background:#fbf6ef;
+      border-radius:16px;
+      padding:14px 16px;
+      color:var(--fg);
+      font-size:14px;
+      line-height:1.75;
+      white-space:pre-line;
+    }
 
-#author-site .book-sample strong{
-  display:block;
-  margin-bottom:2px;
-  line-height:1.2;
-  color:var(--accent);
-  font-size:12px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
+    #author-site .book-sample strong{
+      display:block;
+      margin-bottom:0;
+      line-height:1.2;
+      color:var(--accent);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
 
     #author-site .book-tags{
       display:flex;
@@ -908,11 +908,16 @@
       cursor:pointer;
       list-style:none;
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       justify-content:space-between;
       gap:12px;
       font-weight:900;
       letter-spacing:-.01em;
+    }
+
+    #author-site summary > span{
+      flex:1 1 auto;
+      min-width:0;
     }
 
     #author-site summary::-webkit-details-marker{ display:none; }
@@ -922,6 +927,7 @@
       height:18px;
       transition:transform .15s ease;
       flex:0 0 auto;
+      margin-top:2px;
     }
 
     #author-site details[open] .chev{
@@ -1343,16 +1349,13 @@
                       </div>
                     </div>
 
-                    <div class="book-sample">
-                      <strong>Amostra</strong>
-Nunca
+                    <div class="book-sample"><strong>Amostra</strong>Nunca
 Duvide de Deus
 Do juiz e do réu
 Duvide dos versos meus
 Das estrelas no Céu
 Duvide de todo o esplendor
-Mas nunca do meu amor!
-                    </div>
+Mas nunca do meu amor!</div>
 
                     <div class="book-tags">
                       <span class="pill">Poesia</span>
@@ -1416,15 +1419,12 @@ Mas nunca do meu amor!
                       </div>
                     </div>
 
-                    <div class="book-sample">
-                      <strong>Amostra</strong>
-No processo de criação... o poeta escuta
+                    <div class="book-sample"><strong>Amostra</strong>No processo de criação... o poeta escuta
 mais os silêncios do que os sons... e o faz
 com atento ouvido
 Seus melhores dons...
 Moram nos intervalos entre os sons
-O silêncio é o seu sexto sentido!
-                    </div>
+O silêncio é o seu sexto sentido!</div>
 
                     <div class="book-tags">
                       <span class="pill">Poesia</span>
@@ -1488,13 +1488,10 @@ O silêncio é o seu sexto sentido!
                       </div>
                     </div>
 
-                    <div class="book-sample">
-                      <strong>Amostra</strong>
-Vem... bonança... acalma essa tormenta!
+                    <div class="book-sample"><strong>Amostra</strong>Vem... bonança... acalma essa tormenta!
 Vem... flor de lótus... emerge da lama...
 Suaviza o drama...
-Da alma macilenta!
-                    </div>
+Da alma macilenta!</div>
 
                     <div class="book-tags">
                       <span class="pill">Poesia</span>
@@ -1666,186 +1663,186 @@ Da alma macilenta!
       </section>
 
       <section class="stripe stripe--soft" id="faq" aria-label="Perguntas frequentes">
-  <div class="wrap">
-    <div class="panel">
-      <div class="head">
-        <span class="tag">Perguntas frequentes</span>
-        <h2 class="h2">Perguntas frequentes</h2>
-        <p class="muted">Uma seção para orientar o leitor sobre a poesia de Ernani Affonso Trein Júnior, os temas da obra, os livros publicados e as formas de conhecer melhor seus textos.</p>
-      </div>
+        <div class="wrap">
+          <div class="panel">
+            <div class="head">
+              <span class="tag">Perguntas frequentes</span>
+              <h2 class="h2">Perguntas frequentes</h2>
+              <p class="muted">Uma seção para orientar o leitor sobre a poesia de Ernani Affonso Trein Júnior, os temas da obra, os livros publicados e as formas de conhecer melhor seus textos.</p>
+            </div>
 
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>
-            Que tipo de poesia Ernani Affonso Trein Júnior escreve?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            A obra de Ernani Affonso Trein Júnior reúne uma poesia marcada por amor, saudade, desejo, contemplação, fé, imaginação e reflexão. Seus textos aproximam emoção, musicalidade e imagens fortes, criando uma leitura sensível, intensa e acessível.
-          </div>
-        </details>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>
+                  <span>Que tipo de poesia Ernani Affonso Trein Júnior escreve?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  A obra de Ernani Affonso Trein Júnior reúne uma poesia marcada por amor, saudade, desejo, contemplação, fé, imaginação e reflexão. Seus textos aproximam emoção, musicalidade e imagens fortes, criando uma leitura sensível, intensa e acessível.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Quais temas aparecem com mais frequência nos livros?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Entre os temas mais recorrentes estão amor, ausência, memória, sonho, saudade, desejo, espiritualidade, inquietação interior e busca de sentido. São livros que dialogam com a experiência afetiva e com a vida interior do leitor.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Quais temas aparecem com mais frequência nos livros?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Entre os temas mais recorrentes estão amor, ausência, memória, sonho, saudade, desejo, espiritualidade, inquietação interior e busca de sentido. São livros que dialogam com a experiência afetiva e com a vida interior do leitor.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Para quem essas leituras são indicadas?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Os livros são indicados para leitores que apreciam poesia de forte carga emocional, com temas ligados ao amor, à saudade, à contemplação, à fé, ao desejo e à reflexão. Também interessam a quem procura textos sensíveis, imagéticos e marcados por intensidade afetiva.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Para quem essas leituras são indicadas?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Os livros são indicados para leitores que apreciam poesia de forte carga emocional, com temas ligados ao amor, à saudade, à contemplação, à fé, ao desejo e à reflexão. Também interessam a quem procura textos sensíveis, imagéticos e marcados por intensidade afetiva.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Os livros podem ser lidos de forma independente?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Sim. Cada livro pode ser lido de forma independente. O leitor pode começar pelo volume cujos temas, atmosfera ou amostras de leitura mais dialoguem com seu momento e sua sensibilidade.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Os livros podem ser lidos de forma independente?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Sim. Cada livro pode ser lido de forma independente. O leitor pode começar pelo volume cujos temas, atmosfera ou amostras de leitura mais dialoguem com seu momento e sua sensibilidade.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Existe um livro mais indicado para começar?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Não há uma ordem obrigatória. Para muitos leitores, o melhor caminho é começar pelo livro cuja apresentação ou trecho desperta maior identificação. A página foi organizada justamente para facilitar esse primeiro contato com a obra.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Existe um livro mais indicado para começar?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Não há uma ordem obrigatória. Para muitos leitores, o melhor caminho é começar pelo livro cuja apresentação ou trecho desperta maior identificação. A página foi organizada justamente para facilitar esse primeiro contato com a obra.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Posso ler um trecho antes de decidir?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Sim. A página oferece trechos e materiais de leitura para que você conheça melhor a linguagem, o ritmo e os temas trabalhados por Ernani Affonso Trein Júnior antes de decidir pela leitura completa ou pela aquisição de um livro.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Posso ler um trecho antes de decidir?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Sim. A página oferece trechos e materiais de leitura para que você conheça melhor a linguagem, o ritmo e os temas trabalhados por Ernani Affonso Trein Júnior antes de decidir pela leitura completa ou pela aquisição de um livro.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            A obra se concentra apenas em poesia amorosa?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Não. Embora o amor e a saudade sejam centrais em muitos textos, a obra também se abre para sonho, espiritualidade, desejo, memória, culpa, compaixão, imaginação e reflexão existencial. Há variedade temática dentro de uma mesma sensibilidade poética.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>A obra se concentra apenas em poesia amorosa?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Não. Embora o amor e a saudade sejam centrais em muitos textos, a obra também se abre para sonho, espiritualidade, desejo, memória, culpa, compaixão, imaginação e reflexão existencial. Há variedade temática dentro de uma mesma sensibilidade poética.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            O que é o livro em destaque, "Alvarenga Dhrex: A Jornada"?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            <em>Alvarenga Dhrex: A Jornada – Reflexões, Conquistas e Sedução</em> é uma obra em coautoria com Jorge Mardini Sobrinho. O livro aproxima prosa e poesia em uma leitura marcada por desejo, memória, intensidade e reflexão, ampliando o horizonte da obra apresentada na página.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>O que é o livro em destaque, <em>Alvarenga Dhrex: A Jornada</em>?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  <em>Alvarenga Dhrex: A Jornada – Reflexões, Conquistas e Sedução</em> é uma obra em coautoria com Jorge Mardini Sobrinho. O livro aproxima prosa e poesia em uma leitura marcada por desejo, memória, intensidade e reflexão, ampliando o horizonte da obra apresentada na página.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Como acompanhar novidades e novos materiais?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            Você pode cadastrar seu contato para receber novidades sobre livros, leituras, materiais e atualizações relacionadas à obra de Ernani Affonso Trein Júnior.
-          </div>
-        </details>
+              <details class="faq-item">
+                <summary>
+                  <span>Como acompanhar novidades e novos materiais?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  Você pode cadastrar seu contato para receber novidades sobre livros, leituras, materiais e atualizações relacionadas à obra de Ernani Affonso Trein Júnior.
+                </div>
+              </details>
 
-        <details class="faq-item">
-          <summary>
-            Como entrar em contato sobre os livros?
-            <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
-            </svg>
-          </summary>
-          <div class="faq-answer">
-            O canal de contato da página pode ser usado para enviar mensagens sobre os livros, interesse em aquisição, dúvidas sobre materiais e outros assuntos relacionados à obra.
-          </div>
-        </details>
-      </div>
+              <details class="faq-item">
+                <summary>
+                  <span>Como entrar em contato sobre os livros?</span>
+                  <svg class="chev" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 8l5 5 5-5"></path>
+                  </svg>
+                </summary>
+                <div class="faq-answer">
+                  O canal de contato da página pode ser usado para enviar mensagens sobre os livros, interesse em aquisição, dúvidas sobre materiais e outros assuntos relacionados à obra.
+                </div>
+              </details>
+            </div>
 
-      <div class="faq-grid-bottom">
-        <div class="card">
-          <h3>Catálogo da obra</h3>
-          <p>Receba um panorama dos livros, do percurso literário e dos principais caminhos de leitura da poesia de Ernani Affonso Trein Júnior.</p>
-          <div style="margin-top:16px;">
-            <button
-              class="btn btn--primary w-full js-download"
-              type="button"
-              data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
-              data-file-id="100Udfg6SzQMj6P4Buy1R5ILnnmHJPXEr">
-              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
-                <path d="M12 3v10"></path>
-                <path d="M8 9l4 4 4-4"></path>
-                <path d="M4 17v3h16v-3"></path>
-              </svg>
-              Download do catálogo
-            </button>
+            <div class="faq-grid-bottom">
+              <div class="card">
+                <h3>Catálogo da obra</h3>
+                <p>Receba um panorama dos livros, do percurso literário e dos principais caminhos de leitura da poesia de Ernani Affonso Trein Júnior.</p>
+                <div style="margin-top:16px;">
+                  <button
+                    class="btn btn--primary w-full js-download"
+                    type="button"
+                    data-item="CATALOGO AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                    data-file-id="100Udfg6SzQMj6P4Buy1R5ILnnmHJPXEr">
+                    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                      <path d="M12 3v10"></path>
+                      <path d="M8 9l4 4 4-4"></path>
+                      <path d="M4 17v3h16v-3"></path>
+                    </svg>
+                    Download do catálogo
+                  </button>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>Receba novidades</h3>
+                <p>Acompanhe lançamentos, leituras, materiais e atualizações da obra por e-mail.</p>
+                <div style="margin-top:16px;">
+                  <button
+                    class="btn btn--secondary w-full js-download"
+                    type="button"
+                    data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
+                    data-file-id="15xaq2IrP382C-mm7DVig22B2ko7k-9SC">
+                    Acompanhar novidades
+                  </button>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>Entre em contato</h3>
+                <p>Envie uma mensagem sobre os livros, interesse em aquisição ou outros assuntos ligados à obra.</p>
+                <div style="margin-top:16px;">
+                  <button
+                    class="btn btn--secondary w-full js-ticket"
+                    type="button"
+                    data-item="CONTATO AUTOR ERNANI AFFONSO TREIN JUNIOR">
+                    Entrar em contato
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="card">
-          <h3>Receba novidades</h3>
-          <p>Acompanhe lançamentos, leituras, materiais e atualizações da obra por e-mail.</p>
-          <div style="margin-top:16px;">
-            <button
-              class="btn btn--secondary w-full js-download"
-              type="button"
-              data-item="NOVIDADES AUTOR ERNANI AFFONSO TREIN JUNIOR"
-              data-file-id="15xaq2IrP382C-mm7DVig22B2ko7k-9SC">
-              Acompanhar novidades
-            </button>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Entre em contato</h3>
-          <p>Envie uma mensagem sobre os livros, interesse em aquisição ou outros assuntos ligados à obra.</p>
-          <div style="margin-top:16px;">
-            <button
-              class="btn btn--secondary w-full js-ticket"
-              type="button"
-              data-item="CONTATO AUTOR ERNANI AFFONSO TREIN JUNIOR">
-              Entrar em contato
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section class="stripe stripe--plain" style="padding-top:24px" aria-label="Rodapé">
         <div class="wrap">
